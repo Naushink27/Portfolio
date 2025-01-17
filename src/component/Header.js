@@ -1,31 +1,51 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 50) { // Check for vertical scroll
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <header className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
-      <div className="container mx-auto flex items-center justify-between px-4 py-4">
-        {/* Logo */}
+    <header
+      className={`fixed w-full top-0 left-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-white shadow-md" // Background becomes white with shadow when scrolled
+          : "bg-[url('https://devman-react.vercel.app/img/hero/1.jpg')] bg-cover bg-center"
+      }`}
+    >
+      <div className="max-w-screen-xl mx-auto px-6 py-4 flex justify-between items-center">
         <h1 className="text-2xl font-bold">
           MY<span className="text-red-400">Portfolio</span>
         </h1>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6">
-          <a href="#home" className="hover:text-red-400">
+          <a href="#home" className="hover:text-red-400 font-mono font-bold">
             Home
           </a>
-          <a href="#about" className="hover:text-red-400">
+          <a href="#about" className="hover:text-red-400 font-mono font-bold">
             About
           </a>
-          <a href="#Skills" className="hover:text-red-400">
+          <a href="#Skills" className="hover:text-red-400 font-mono font-bold">
             Skills
           </a>
-          <a href="#Projects" className="hover:text-red-400">
+          <a href="#Projects" className="hover:text-red-400 font-mono font-bold">
             Projects
           </a>
-         
         </nav>
 
         {/* Download CV Button */}
@@ -46,19 +66,39 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-blue-600 text-white">
           <nav className="flex flex-col items-center space-y-4 py-4">
-            <a href="#home" className="hover:text-red-400" onClick={() => setIsMenuOpen(false)}>
+            <a
+              href="#home"
+              className="hover:text-red-400"
+              onClick={() => setIsMenuOpen(false)}
+            >
               Home
             </a>
-            <a href="#about" className="hover:text-red-400" onClick={() => setIsMenuOpen(false)}>
+            <a
+              href="#about"
+              className="hover:text-red-400"
+              onClick={() => setIsMenuOpen(false)}
+            >
               About
             </a>
-            <a href="#portfolio" className="hover:text-red-400" onClick={() => setIsMenuOpen(false)}>
+            <a
+              href="#portfolio"
+              className="hover:text-red-400"
+              onClick={() => setIsMenuOpen(false)}
+            >
               Portfolio
             </a>
-            <a href="#services" className="hover:text-red-400" onClick={() => setIsMenuOpen(false)}>
+            <a
+              href="#services"
+              className="hover:text-red-400"
+              onClick={() => setIsMenuOpen(false)}
+            >
               Services
             </a>
-            <a href="#contact" className="hover:text-red-400" onClick={() => setIsMenuOpen(false)}>
+            <a
+              href="#contact"
+              className="hover:text-red-400"
+              onClick={() => setIsMenuOpen(false)}
+            >
               Contact
             </a>
             <button

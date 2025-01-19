@@ -46,12 +46,19 @@ const Header = () => {
           <a href="#Projects" className="hover:text-red-400 font-mono font-bold">
             Projects
           </a>
+          <a href="#Contact" className="hover:text-red-400 font-mono font-bold">
+           Contact
+          </a>
         </nav>
 
         {/* Download CV Button */}
         <button className="hidden md:block bg-red-500 px-4 py-2 rounded-lg hover:bg-red-600">
-          Download CV
-        </button>
+  <a href="/resume.pdf" download="My_Resume" className="text-white">
+    Download CV
+  </a>
+</button>
+
+
 
         {/* Mobile Hamburger Menu */}
         <button
@@ -81,25 +88,18 @@ const Header = () => {
               About
             </a>
             <a
-              href="#portfolio"
+              href="#Skills"
               className="hover:text-red-400"
               onClick={() => setIsMenuOpen(false)}
             >
-              Portfolio
+              Skills
             </a>
             <a
-              href="#services"
+              href="#Projects"
               className="hover:text-red-400"
               onClick={() => setIsMenuOpen(false)}
             >
-              Services
-            </a>
-            <a
-              href="#contact"
-              className="hover:text-red-400"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Contact
+              Projects
             </a>
             <button
               className="bg-red-500 px-4 py-2 rounded-lg hover:bg-red-600"

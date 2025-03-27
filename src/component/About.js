@@ -20,7 +20,9 @@ const About = () => {
             <div>
               <h3 className="text-xl font-semibold text-gray-800 mb-2">Skills</h3>
               <ul className="list-disc list-inside text-gray-700">
+                <li>Node.JS , Express, MongoDB</li>
                 <li>HTML, CSS, JavaScript</li>
+
                 <li>Bootstrap, React</li>
                 <li>Firebase (learning)</li>
                 <li>Microsoft Office</li>

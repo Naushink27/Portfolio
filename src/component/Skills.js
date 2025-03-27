@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 
 const Skills = () => {
   const skills = [
-    { name: "HTML", level: "100%" },
-    { name: "CSS", level: "85%" },
-    { name: "JavaScript", level: "90%" },
-    { name: "React", level: "85%" },
+    { name: "Node", level: "100%" },
+    { name: "Express", level: "85%" },
+    { name: "React", level: "90%" },
+    { name: "Javascript", level: "100%" },
     { name: "Tailwind CSS", level: "70%" },
-    { name: "NodeJs", level: "10%" },
+    { name: "MongoDB", level: "70%" },
   ];
 
   const [animateProgress, setAnimateProgress] = useState(false);

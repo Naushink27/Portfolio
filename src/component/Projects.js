@@ -1,5 +1,6 @@
 import NetflixGPT from "../Assets/NetflixGPT.png"
 import ShinSpace from "../Assets/ShinSpace.png"
+import Devtinder from "../Assets/Devtinder.png"
 import TODO from "../Assets/TODO.png"
 import Weather from "../Assets/Weather.png"
 import Currency from "../Assets/Currency.png"
@@ -7,17 +8,17 @@ const Projects = () => {
     const projects = [
       {
         id: 1,
+        title: "DevTinder",
+        description: "Application where you can connect with other developers.",
+        image: Devtinder, // Replace with your project image URL
+        link: "https://devtinder-web-if8h.vercel.app", // Replace with your app URL
+      },
+      {
+        id: 2,
         title: "Netflix GPT",
         description: "It shows all types of movies and also use gemini api to suggest movies based on the prompt",
         image: NetflixGPT, // Replace with your project image URL
         link: "https://net-flix-gpt-jet.vercel.app/", // Replace with your app URL
-      },
-      {
-        id: 2,
-        title: "Chat-application",
-        description: "Built a real-time chat application using React and Firebase for user authentication and message storage. ",
-        image: ShinSpace, // Replace with your project image URL
-        link: "https://shin-space-pwul.vercel.app/", // Replace with your app URL
       },
       {
         id: 3,

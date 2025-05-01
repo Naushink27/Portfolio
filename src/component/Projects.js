@@ -4,8 +4,16 @@ import Devtinder from "../Assets/Devtinder.png"
 import TODO from "../Assets/TODO.png"
 import Weather from "../Assets/Weather.png"
 import Currency from "../Assets/Currency.png"
+import GoRail from "../Assets/GoRail.png"
 const Projects = () => {
     const projects = [
+      {
+        id: 0,
+        title: "GoRail",
+        description: "Train Booking Application.",
+        image:GoRail, // Replace with your project image URL
+        link: "https://go-rail.vercel.app", // Replace with your app URL
+      },
       {
         id: 1,
         title: "DevTinder",

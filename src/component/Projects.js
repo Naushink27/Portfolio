@@ -1,5 +1,5 @@
 import NetflixGPT from "../Assets/NetflixGPT.png"
-import ShinSpace from "../Assets/ShinSpace.png"
+
 import Devtinder from "../Assets/Devtinder.png"
 import TODO from "../Assets/TODO.png"
 import Weather from "../Assets/Weather.png"

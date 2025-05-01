@@ -53,7 +53,7 @@ const Header = () => {
 
         {/* Download CV Button */}
         <button className="hidden md:block bg-red-500 px-4 py-2 rounded-lg hover:bg-red-600">
-  <a href="/Resume1.pdf" download="My_Resume" className="text-white">
+  <a href="/resume.pdf" download="My_Resume" className="text-white">
     Download CV
   </a>
 </button>

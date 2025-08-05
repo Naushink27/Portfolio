@@ -5,6 +5,7 @@ import TODO from "../Assets/TODO.png"
 import Weather from "../Assets/Weather.png"
 import Currency from "../Assets/Currency.png"
 import GoRail from "../Assets/GoRail.png"
+import HealthCare from '../Assets/HealthCare.png'
 const Projects = () => {
     const projects = [
       {
@@ -13,6 +14,13 @@ const Projects = () => {
         description: "Train Booking Application.",
         image:GoRail, // Replace with your project image URL
         link: "https://go-rail.vercel.app", // Replace with your app URL
+      },
+      {
+        id: 2,
+        title: "HealthCare",
+        description: "Application Patient can book appointment with doctor and doctor can manage their appointments.",
+        image: HealthCare, // Replace with your project image URL
+        link: "https://healthcare-frontend-lake.vercel.app", // Replace with your app URL
       },
       {
         id: 1,

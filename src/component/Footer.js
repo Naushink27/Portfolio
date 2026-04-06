@@ -1,57 +1,77 @@
+import React from "react";
+
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-6">
-      <div className="max-w-5xl mx-auto px-6 md:px-20">
-        {/* Top Section */}
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          {/* Branding */}
-          <h3 className="text-2xl font-bold mb-4 md:mb-0">
-            Naushin's Portfolio
-          </h3>
+    <footer style={{
+      background: "#0a0a0f",
+      borderTop: "1px solid rgba(255,255,255,0.06)",
+      padding: "32px 24px",
+    }}>
+      <div style={{
+        maxWidth: "1100px",
+        margin: "0 auto",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        flexWrap: "wrap",
+        gap: "16px",
+      }}>
+        <span style={{
+          fontFamily: "'Syne', sans-serif",
+          fontSize: "18px",
+          fontWeight: 800,
+          color: "#fff",
+          letterSpacing: "-0.5px",
+        }}>
+          NK<span style={{
+            display: "inline-block",
+            width: "5px", height: "5px",
+            borderRadius: "50%",
+            background: "#6366f1",
+            marginLeft: "2px",
+            verticalAlign: "middle",
+            marginBottom: "2px",
+          }} />
+        </span>
 
-          {/* Social Links */}
-          <div className="flex space-x-6">
-            {/* LinkedIn */}
+        <p style={{
+          fontFamily: "'DM Sans', sans-serif",
+          fontSize: "13px",
+          color: "rgba(255,255,255,0.3)",
+        }}>
+          © 2026 Naushin Khan. All rights reserved.
+        </p>
+
+        <div style={{ display: "flex", gap: "20px" }}>
+          {[
+            { label: "GitHub", href: "https://github.com/Naushink27" },
+            { label: "LinkedIn", href: "https://linkedin.com/in/naushink27" },
+            { label: "Email", href: "mailto:naushink2709@gmail.com" },
+          ].map((link) => (
             <a
-              href="https://linkedin.com/in/naushink27"
+              key={link.label}
+              href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-blue-500 text-xl transition duration-300"
-              title="LinkedIn"
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: "14px",
+                color: "rgba(255,255,255,0.4)",
+                textDecoration: "none",
+                transition: "color 0.2s",
+              }}
+              onMouseEnter={e => e.target.style.color = "#6366f1"}
+              onMouseLeave={e => e.target.style.color = "rgba(255,255,255,0.4)"}
             >
-              LinkedIn
+              {link.label}
             </a>
-
-            {/* GitHub */}
-            <a
-              href="https://github.com/Naushink27"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-gray-300 text-xl transition duration-300"
-              title="GitHub"
-            >
-              GitHub
-            </a>
-
-            {/* Email */}
-            <a
-              href="mailto:naushink2709@gmail.com"
-              className="text-gray-400 hover:text-red-500 text-xl transition duration-300"
-              title="Email"
-            >
-              Email
-            </a>
-          </div>
-        </div>
-
-        {/* Divider */}
-        <hr className="my-6 border-gray-700" />
-
-        {/* Bottom Section */}
-        <div className="text-center text-sm text-gray-400">
-          <p>&copy; 2025 Naushin. All rights reserved.</p>
+          ))}
         </div>
       </div>
+
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap');
+      `}</style>
     </footer>
   );
 };

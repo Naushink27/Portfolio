@@ -123,7 +123,7 @@ const Header = () => {
 
         {/* CTA Button */}
         <a
-          href="/Naushin-resume.pdf"
+          href="/Naushin_Khan_Resume.pdf"
           download="Naushin_Khan_Resume"
           className="hidden-mobile"
           style={{
@@ -189,7 +189,7 @@ const Header = () => {
             </a>
           ))}
           <a
-            href="/Naushin-resume.pdf"
+            href="/Naushin_Khan_Resume.pdf"
             download="Naushin_Khan_Resume"
             style={{
               display: "block",

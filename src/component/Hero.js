@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-
+ const ROLES = ["Full Stack Developer", "React Enthusiast", "Problem Solver", "CS Student @ SSGB"];
 const Hero = () => {
   const [visible, setVisible] = useState(false);
   const [typedText, setTypedText] = useState("");
-  const roles = ["Full Stack Developer", "React Enthusiast", "Problem Solver", "CS Student @ SSGB"];
+ 
   const [roleIndex, setRoleIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [deleting, setDeleting] = useState(false);
@@ -13,7 +13,7 @@ const Hero = () => {
   }, []);
 
   useEffect(() => {
-    const current = roles[roleIndex];
+   const current = ROLES[roleIndex];
     let timer;
     if (!deleting) {
       if (charIndex < current.length) {
@@ -32,7 +32,7 @@ const Hero = () => {
         }, 40);
       } else {
         setDeleting(false);
-        setRoleIndex((r) => (r + 1) % roles.length);
+        setRoleIndex((r) => (r + 1) % ROLES.length);
       }
     }
     return () => clearTimeout(timer);

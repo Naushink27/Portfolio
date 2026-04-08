@@ -10,7 +10,7 @@ const Hero = () => {
 
   useEffect(() => {
     setTimeout(() => setVisible(true), 100);
-  }, [roles]);
+  }, []);
 
   useEffect(() => {
     const current = roles[roleIndex];
